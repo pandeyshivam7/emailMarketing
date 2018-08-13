@@ -53,13 +53,16 @@ function  start()
     $("#drag_item1").draggable({
         helper:function()
         {
-            var data="<i class='fas fa-comment'></i>"
+            var data="<textarea>hiiiiii</textarea>"
             return(data);
         },
-        stop:function()
+        stop:function(event,ui)
         {
-            var d="<p>para</p>";
-            $("")
+            console.log(ui);
+            var data=ui.helper[0];
+            console.log(data);
+            $("#droppable").append(data);
+            
         }
 
     })
