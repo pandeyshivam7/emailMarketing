@@ -54,12 +54,16 @@ function  start()
         helper:function()
         {
             var data="<textarea>hiiiiii</textarea>"
+            $(data).attr({
+                class:"drop_item",
+            })
             return(data);
         },
         stop:function(event,ui)
         {
-            console.log(ui);
+            console.log(event);
             var data=ui.helper[0];
+            
             console.log(data);
             $("#droppable").append(data);
             
@@ -67,11 +71,17 @@ function  start()
 
     })
     $("#droppable").droppable({
+        //  accept: ".drop_item",
         drop:function()
         {
+            console.log("dropped");
             $("#vanish").css("display","none");
         }
     })
+}
+function open_image()
+{
+    $('#imgupload').trigger('click');
 }
 $(document).ready(function() {
     // $("#audience_tab").fadeTo(100,0.3);

@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    
   
     <div class="tab">
         <div class="logo_div">
@@ -1158,36 +1159,36 @@
                                     <div class="modal-body"> -->
                                         <div class="row add_comp_body">
                                             <div id="div1">
-                                                <div class="modal_btn drop_items " id="drag_item1"><img src="assets/images/text-1.png">
+                                                <div class="modal_btn  " id="drag_item1"><img src="assets/images/text-1.png">
                                                 </div>
                                                 <p >Text</p>
                                             </div>
                                             <!-- on click open the image which will be draggable or directly drop the image over the droppable -->
                                             <div>
+                                                    <input type="file" id="imgupload" style="display:none"/>
                                                 <div class=" modal_btn " onclick="open_image()"><img src="assets/images/image.png">
                                                 </div>
                                                 <p>Image</p>
                                             </div>
                                             <div>
-                                                <button class="btn modal_btn" type="button" data-toggle="dropdown"><img src="assets/images/blocks.png">
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                <!-- on click we drop the block which can be draggable -->
-                                                    <li><div onclick="">Two blocks</div></li> 
-                                                    <li><div onclick="">Three blocks</div></li>
-                                                </ul>
-                                                <p>Blocks</p>
+                                                    <button class="btn modal_btn" type="button" data-toggle="dropdown"><img src="assets/images/blocks.png">
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Two blocks</a></li>
+                                                        <li><a href="#">Three blocks</a></li>
+                                                    </ul>
+                                                    <p>Blocks</p>
                                             </div>
                                             <div>
                                                 <!-- in modal when everything is set for the button ,press ok to get that specific button and drag and drop that button -->
-                                                <div class=" modal_btn" data-toggle="modal" data-target="#button_Modal"><img src="assets/images/button.png">
-                                                </div>
+                                                <button class="btn modal_btn" type="button" data-toggle="modal" data-target="#button_Modal"><img src="assets/images/button.png">
+                                                </button>
                                                 <p>Button</p>
                                             </div>
                                             <div>
                                                 <!-- same here when press ok -->
-                                                <div class=" modal_btn"  data-toggle="modal" data-target="#social_Modal"><img src="assets/images/social-media.png">
-                                                </div>
+                                                <button class="btn modal_btn" type="button" data-toggle="modal" data-target="#social_Modal"><img src="assets/images/social-media.png">
+                                                </button>
                                                 <p>Social</p>
                                             </div>
                                         </div>
