@@ -48,10 +48,31 @@ function toggle_group(source) {
 //         // alert();
 //            $("#add_btn").hide();
 //     });
+function  start()
+{
+    $("#drag_item1").draggable({
+        helper:function()
+        {
+            var data="<i class='fas fa-comment'></i>"
+            return(data);
+        },
+        stop:function()
+        {
+            var d="<p>para</p>";
+            $("")
+        }
 
+    })
+    $("#droppable").droppable({
+        drop:function()
+        {
+            $("#vanish").css("display","none");
+        }
+    })
+}
 $(document).ready(function() {
     // $("#audience_tab").fadeTo(100,0.3);
-
+    start();
     $('#groups_tab').click(function() {
         $('#add_btn').hide();
         $('#delete_btn').text('Delete Group');
